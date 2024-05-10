@@ -1,3 +1,8 @@
+# Recipe-Book
+
+Developed a recipe book web application using Angular, allowing users to browse, create, update, and delete recipes.
+
+
 # CourseProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
