@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	<div class="container">
+		<a routerLink="/" class="navbar-brand">Recipe Book</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+			aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav me-auto mt-2 mt-lg-0">
+				<li class="nav-item" routerLinkActive="active" >
+					<a class="nav-link mx-2" routerLink="/recipes" style="cursor: pointer;" *ngIf="isAuthenticated">Recipes</a>
+				</li>
+				<li class="nav-item" routerLinkActive="active">
+					<a class="nav-link mx-2" routerLink="/shopping-list" style="cursor: pointer;">Shopping List</a>
+				</li>
+				<li class="nav-item" routerLinkActive="active">
+					<a class="nav-link mx-2" routerLink="/auth" style="cursor: pointer;" *ngIf="!isAuthenticated">Authenticate</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav">
+				<li class="nav-item" *ngIf="isAuthenticated">
+					<a class="nav-link mx-2" style="cursor: pointer;" (click)="onLogout()">Logout</a>
+				</li>
+				<li class="dropdown" *ngIf="isAuthenticated">
+					<a appDropdown class="nav-link dropdown-toggle mx-2" role="button">Manage</a>
+					<ul class="dropdown-menu dropdown-menu-end" style="right: 0;">
+						<li><a style="cursor: pointer;" class="dropdown-item" (click)="onSaveData()">Save Data</a></li>
+						<li><a style="cursor: pointer;" class="dropdown-item" (click)="onFetchData()">Fetch Data</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
