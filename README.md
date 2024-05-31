@@ -2,6 +2,8 @@
 
 Developed a recipe book web application using Angular, allowing users to browse, create, update, and delete recipes.
 
+Live demo - https://course-recipe-book-27c41.web.app/
+
 
 # CourseProject
 
